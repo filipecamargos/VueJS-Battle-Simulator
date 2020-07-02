@@ -1,5 +1,6 @@
 //Set it up the pleayers heatlth
 new Vue({
+
     //The target element
     el: "#app",
     data: {
@@ -92,14 +93,14 @@ new Vue({
         checkWin: function() {
             //check to see if the monster is dead
             if (this.monsterHealth <= 0) {
-                if (confirm('YOU won! Do YOU want to start a new game?')) {
+                if (confirm('You Won! PLAY AGAIN?')) {
                     this.startGame();
                 } else {
                     this.gameIsRunning = false;
                 }
                 return true;
             } else if (this.playerHealth <= 0) {
-                if (confirm('YOU Lost! Do YOU want to start a new game?')) {
+                if (confirm('You Lost! PLAY AGAIN?')) {
                     this.startGame();
                 } else {
                     this.gameIsRunning = false;
